@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ad64f1f25a8a42e18f3728c35f04f844" Name="Diagram1">
+        <EntityTypeShape EntityType="PinchukovModel.Client" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" FillColor="0, 160, 204" />
+        <EntityTypeShape EntityType="PinchukovModel.Employee" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="PinchukovModel.Gender" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PinchukovModel.Order" Width="1.5" PointX="5.25" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PinchukovModel.Post" Width="1.5" PointX="5.25" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PinchukovModel.Registration" Width="1.5" PointX="8.25" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PinchukovModel.Room" Width="1.5" PointX="7.5" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PinchukovModel.sysdiagrams" Width="1.5" PointX="9.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PinchukovModel.TypeOfRoom" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PinchukovModel.VW_EmloyeeGender" Width="1.5" PointX="5.75" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PinchukovModel.VW_EmloyeePost" Width="1.5" PointX="7.75" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PinchukovModel.VW_EmploeeySalary" Width="1.5" PointX="9.75" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PinchukovModel.VW_EmployeeYearSalary" Width="1.5" PointX="0.75" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PinchukovModel.VW_PostSalary" Width="1.5" PointX="9.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PinchukovModel.VW_RoomOrder" Width="1.5" PointX="2.75" PointY="12.375" IsExpanded="true" />
+        <AssociationConnector Association="PinchukovModel.FK__Client__IdGender__59FA5E80" ManuallyRouted="false" />
+        <AssociationConnector Association="PinchukovModel.FK__Order__IdClient__5EBF139D" ManuallyRouted="false" />
+        <AssociationConnector Association="PinchukovModel.FK_Registration_Client" ManuallyRouted="false" />
+        <AssociationConnector Association="PinchukovModel.FK__Employee__IdGend__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="PinchukovModel.FK_Registration_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="PinchukovModel.FK__Room__IdTypeOfRo__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="PinchukovModel.EmployeePost" ManuallyRouted="false" />
+        <AssociationConnector Association="PinchukovModel.RoomOrder" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

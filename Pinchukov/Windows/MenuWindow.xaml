@@ -1,0 +1,70 @@
+﻿<Window x:Class="Pinchukov.Windows.MenuWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pinchukov.Windows"
+        mc:Ignorable="d"
+        Title="MenuWindow" Height="500" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Заказы" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"/>
+        <ListView x:Name="LVProd" Grid.Row="2" d:ItemsSource="{d:SampleData ItemCount=50}" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel/>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="Black"
+                            BorderThickness="1"
+                            Margin="5"
+                            Width="165"
+                            Height="260">
+                        <StackPanel>
+                            <Image Height="140"
+                                   Width="165"
+                                   Stretch="Fill">
+                                <Image.Source>
+                                    <Binding Path="ImageProduct">
+                                        <Binding.TargetNullValue>
+                                            <ImageSource>\Res\defaultImage.png</ImageSource>
+                                        </Binding.TargetNullValue>
+                                    </Binding>
+                                </Image.Source>
+                            </Image>
+                            <TextBlock Text="{Binding NameOfProduct}"
+                                       FontSize="18"
+                                       FontWeight="Bold"
+                                       Margin="10 0 0 0"
+                                       TextWrapping="Wrap" />
+
+                            <TextBlock Text="{Binding Price}"
+                                       FontSize="18"
+                                       FontWeight="Bold"
+                                       Margin="10 0 0 0"/>
+
+                            <TextBlock Text="{Binding Description}"
+                                       FontSize="14"
+                                       FontWeight="Bold"
+                                       Margin="10 0 10 0"
+                                       TextWrapping="Wrap" 
+                                       />
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+
+
+        </ListView>
+        <Button x:Name="btnAddProduct" Content="Добавить заказ" Width="100" Height="20" Click="btnAddProduct_Click"  Grid.Row="3"/>
+    </Grid>
+</Window>
